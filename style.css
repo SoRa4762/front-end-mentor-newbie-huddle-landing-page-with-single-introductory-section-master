@@ -1,0 +1,124 @@
+:root {
+  --color-primary-violet: hsl(257, 40%, 49%);
+  --color-primary-soft-magenta: hsl(300, 69%, 71%);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.main-container {
+  background: url("./images/bg-desktop.svg") no-repeat
+    var(--color-primary-violet);
+  height: 100vh;
+  width: 100vw;
+  display: flex;
+  flex-direction: column;
+  padding: 2rem 3rem 2rem;
+}
+
+.main-container__header {
+  display: flex;
+}
+
+.main-container__contents {
+  margin: 3rem 0 0 0;
+  display: flex;
+}
+
+.main-container__contents-illustration img {
+  height: 500px;
+}
+
+.main-container__contents-texts {
+  margin: 3rem 0 0 3rem;
+}
+
+.main-container__contents-texts h1 {
+  font-size: 42px;
+  color: white;
+}
+.main-container__contents-texts p {
+  font-size: 20px;
+  color: white;
+  margin: 1rem 0;
+}
+.main-container__contents-texts button {
+  cursor: pointer;
+  font-size: 20px;
+  color: var(--color-primary-violet);
+  padding: 0.5rem 3rem;
+  border-radius: 25px;
+  border: none;
+  box-shadow: 1px 1px 4px black;
+}
+.main-container__contents-texts button:hover {
+  color: white;
+  background-color: var(--color-primary-soft-magenta);
+  transition: ease-in-out 0.3s;
+}
+
+.main-container__footer {
+  display: flex;
+  justify-content: flex-end;
+  gap: 1rem;
+  color: white;
+  cursor: pointer;
+}
+
+.main-container__footer p:hover {
+  color: var(--color-primary-soft-magenta);
+}
+
+.attribution {
+  font-size: 11px;
+  text-align: center;
+}
+.attribution a {
+  color: hsl(228, 45%, 44%);
+}
+
+/* responsive for mobile devices */
+@media screen and (max-width: 376px) {
+  .main-container {
+    background: url("./images/bg-mobile.svg") no-repeat
+      var(--color-primary-violet);
+    padding: 2rem;
+  }
+
+  .main-container__header img {
+    height: 30px;
+  }
+
+  .main-container__contents {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .main-container__contents-illustration img {
+    height: 210px;
+  }
+
+  .main-container__contents-texts {
+    margin: 3rem 0;
+    text-align: center;
+  }
+
+  .main-container__contents-texts h1 {
+    font-size: 20px;
+  }
+  .main-container__contents-texts p {
+    font-size: 16px;
+  }
+  .main-container__contents-texts button {
+    font-size: 12px;
+    padding: 0.6rem 4rem;
+  }
+
+  .main-container__footer {
+    justify-content: center;
+    margin: 1rem;
+  }
+}
